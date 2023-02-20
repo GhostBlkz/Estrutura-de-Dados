@@ -10,6 +10,9 @@ function revisao2() {
         else if (num == 2) {
             remover(vetor)
         }
+        else if (num == 3){
+            somar(vetor)
+        }
     }
 }
 function inserir(vetor) {
@@ -23,4 +26,8 @@ function remover(vetor) {
     let qntd = Number(prompt("Digite qual a posição do indice a ser removido"))
 
     vetor.splice(qntd, qntd)
+}
+function somar(vetor){
+    console.log("1 - impares \n 2- pares\n 3 - entre x e y")
+    
 }

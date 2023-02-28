@@ -1,4 +1,3 @@
-
 function bubbleSort(vetor) {
     let aux = 0
     for (let j = 0; j < vetor.length - 1; j++) {
@@ -16,14 +15,15 @@ function bubbleSort(vetor) {
 }
 
 function direta(vetor){
-    let fixa = vetor[0]
-    for(let i=0; i < vetor.length; i++){
-        for(let j = i; j < vetor.length; j++){
-            if(vetor[i] > vetor[j]){
-                
-            }
+    let min = 0
+    for(let i=0; i < vetor.length; i++){   
+        min = vetor[i]
+        let j = i - 1
+        while(j >=0 && vetor[j]> min){
+            vetor[j+1] = vetor[j]
+            j--
         }
-        fixa = vetor[0+1]
+        vetor [j+1] = min
     }
 }
 

@@ -55,33 +55,91 @@ function InserDireta2(vetor){
         }
     }
 }
+function vetOrdenado(ordenado){
+    for(let i = 0 ; i < 1000 ; i++){
+        ordenado[i] = i
+    }
+}
+function vetInvertido(invertido){
+    let j = 0
+   for(let i = 1000; i >= 0 ; i--){
+       invertido[i] = j
+       j++
+   }
+}
+function vetRandom(rand){
+    for(let i = 0 ; i < 1000 ; i++){
+        rand[i] = Math.floor(Math.random()*1001)
+    }
+}
 
 
+//--------------------------------
+let vetor = []
+let aux = []
+vetRandom(aux)
 
-let nums = [5, 2, 6, 8, 10, 3, 7]
-console.log(nums)
+vetOrdenado(vetor)
+console.log(vetor)
 console.time('bubbleSort...')
-bubbleSort(nums)
+bubbleSort(vetor)
 console.timeEnd('bubbleSort...')
-console.log(nums)
+console.log(vetor)
 
-nums = [5, 2, 6, 8, 10, 3, 7]
-console.log(nums)
+vetor = []
+vetOrdenado(vetor)
+console.log(vetor)
 console.time('direta...')
-direta(nums)
+direta(vetor)
 console.timeEnd('direta...')
-console.log(nums)
+console.log(vetor)
 
-nums = [5, 2, 6, 8, 10, 3, 7]
-console.log(nums)
+vetor = []
+vetOrdenado(vetor)
+console.log(vetor)
 console.time('InserDireta1...')
-InserDireta1(nums)
+InserDireta1(vetor)
 console.timeEnd('InserDireta1...')
-console.log(nums)
+console.log(vetor)
 
-nums = [5, 2, 6, 8, 10, 3, 7]
-console.log(nums)
+vetor = []
+vetOrdenado(vetor)
+console.log(vetor)
 console.time('InserDireta2...')
-InserDireta2(nums)
+InserDireta2(vetor)
 console.timeEnd('InserDireta2...')
-console.log(nums)
+console.log(vetor)
+//-------------------------------------------
+
+vetor = []
+vetInvertido(vetor)
+console.log(vetor)
+console.time('bubbleSort...')
+bubbleSort(vetor)
+console.timeEnd('bubbleSort...')
+console.log(vetor)
+
+vetor = []
+vetInvertido(vetor)
+console.log(vetor)
+console.time('direta...')
+direta(vetor)
+console.timeEnd('direta...')
+console.log(vetor)
+
+vetor = []
+vetInvertido(vetor)
+console.log(vetor)
+console.time('InserDireta1...')
+InserDireta1(vetor)
+console.timeEnd('InserDireta1...')
+console.log(vetor)
+
+vetor = []
+vetInvertido(vetor)
+console.log(vetor)
+console.time('InserDireta2...')
+InserDireta2(vetor)
+console.timeEnd('InserDireta2...')
+console.log(vetor)
+//-------------------------------------

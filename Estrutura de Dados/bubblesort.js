@@ -65,7 +65,6 @@ function vetRandom(rand){
 
 //--------------------------------
 let vetor = []
-let aux = []
 
 vetOrdenado(vetor)
 console.log(vetor)
@@ -115,28 +114,26 @@ InserDireta2(vetor)
 console.timeEnd('InserDireta2...')
 console.log(vetor)
 //-------------------------------------
+vetor = []
 vetRandom(vetor)
-aux = vetor
-let aux1 = vetor
-let aux2 = vetor
+let aux = vetor.slice()
+let aux1 = vetor.slice()
+let aux2 = vetor.slice()
 
-vetor = aux
-console.log(vetor)
+console.log(aux)
 console.time('bubbleSort...')
-bubbleSort(vetor)
+bubbleSort(aux)
 console.timeEnd('bubbleSort...')
-console.log(vetor)
+console.log(aux)
 
-vetor = aux1
-console.log(vetor)
+console.log(aux1)
 console.time('direta...')
-direta(vetor)
+direta(aux1)
 console.timeEnd('direta...')
-console.log(vetor)
+console.log(aux1)
 
-vetor = aux2
-console.log(vetor)
+console.log(aux2)
 console.time('InserDireta2...')
-InserDireta2(vetor)
+InserDireta2(aux2)
 console.timeEnd('InserDireta2...')
-console.log(vetor)
+console.log(aux2)

@@ -1,6 +1,6 @@
 let vetor = [4, 10, 3, 15, 8, 1, 9, 2, 7]
 
-function buscaDireta(array, key) {
+function buscaSequencial(array, key) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] == key) {
             return `Direta : a chave foi encontrada na posição ${i}`
@@ -13,7 +13,7 @@ function buscaDireta(array, key) {
 }
 
 let chave = 2
-let resultado = buscaDireta(vetor, chave)
+let resultado = buscaSequencial(vetor, chave)
 console.log(resultado)
 
 function directSort(array) {
@@ -67,6 +67,29 @@ function buscaBinaria(array, key) {
 
 let resultado2 = buscaBinaria(vetor, 1)
 console.log(resultado2)
+
+function buscaBinariaRecursiva(array, key, start, end){
+
+    let mid 
+    if (start > end){
+        return "nao encontrado"
+    }
+    else{
+        mid = Math.floor((start+end)/2)
+        if (array[mid]==key){
+            return `Binária Recursiva: valor encontrado na posição ${mid}`
+        }
+        else if (key < array[mid]){
+            return buscaBinariaRecursiva(array, key, start, mid-1)
+        }
+        else{
+            return buscaBinariaRecursiva(array,key, mid+1, end)
+        }
+    }
+}
+console.log(vetor)
+let resultado3=buscaBinariaRecursiva(vetor, 1, 0, vetor.length-1)
+console.log(resultado3)
 
 
 

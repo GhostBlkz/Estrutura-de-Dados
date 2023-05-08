@@ -1,3 +1,4 @@
+// adriano rodrigues gomes da silva, leonardo santos parra
 function Insert(array, key) {
     let rodou = false;
     let key1 = key.charCodeAt();

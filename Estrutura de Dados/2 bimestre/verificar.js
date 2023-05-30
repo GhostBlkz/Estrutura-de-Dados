@@ -18,3 +18,6 @@ function verifica(array) {
 }
 let vetor = ['{', '[', '(', ')', ']', '}']
 console.log(verifica(vetor))
+
+//Adriano Rodrigues Gomes da Silva
+//Leonardo Santos Parra
